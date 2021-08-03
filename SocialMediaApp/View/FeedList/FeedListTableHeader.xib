@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hXb-xB-03z" customClass="FeedListTableHeader" customModule="SocialMediaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKr-zP-18Q">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fy1-KA-RfG">
+                            <rect key="frame" x="10" y="24" width="61" height="58.5"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="fy1-KA-RfG" secondAttribute="height" multiplier="1:1" id="P3V-aT-KiE"/>
+                                <constraint firstAttribute="width" secondItem="fy1-KA-RfG" secondAttribute="height" multiplier="1:1" id="kkH-t2-DRP"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGL-yk-1kF">
+                            <rect key="frame" x="79" y="22.5" width="318" height="61"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstItem="fy1-KA-RfG" firstAttribute="centerY" secondItem="xKr-zP-18Q" secondAttribute="centerY" id="DOJ-uv-WoQ"/>
+                        <constraint firstItem="QGL-yk-1kF" firstAttribute="bottom" secondItem="fy1-KA-RfG" secondAttribute="bottom" id="F1t-G3-nhr"/>
+                        <constraint firstItem="QGL-yk-1kF" firstAttribute="top" secondItem="fy1-KA-RfG" secondAttribute="top" id="TbV-cc-S0p"/>
+                        <constraint firstAttribute="trailing" secondItem="QGL-yk-1kF" secondAttribute="trailing" constant="17" id="X9w-2P-4zf"/>
+                        <constraint firstItem="fy1-KA-RfG" firstAttribute="leading" secondItem="xKr-zP-18Q" secondAttribute="leading" constant="10" id="Zsg-CF-anF"/>
+                        <constraint firstItem="fy1-KA-RfG" firstAttribute="top" secondItem="xKr-zP-18Q" secondAttribute="top" constant="22.5" id="bZT-R7-vjd"/>
+                        <constraint firstItem="QGL-yk-1kF" firstAttribute="leading" secondItem="fy1-KA-RfG" secondAttribute="trailing" constant="8" symbolic="YES" id="nHC-2Z-3QA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="q7q-rh-y0F"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xKr-zP-18Q" firstAttribute="trailing" secondItem="q7q-rh-y0F" secondAttribute="trailing" id="1mf-wN-D6g"/>
+                <constraint firstItem="xKr-zP-18Q" firstAttribute="leading" secondItem="q7q-rh-y0F" secondAttribute="leading" id="KYL-dK-QFZ"/>
+                <constraint firstItem="xKr-zP-18Q" firstAttribute="bottom" secondItem="q7q-rh-y0F" secondAttribute="bottom" id="QUf-0U-Nhh"/>
+                <constraint firstItem="xKr-zP-18Q" firstAttribute="top" secondItem="hXb-xB-03z" secondAttribute="top" id="c8S-1g-rqK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="profileImage" destination="fy1-KA-RfG" id="1ct-ln-peG"/>
+                <outlet property="profileName" destination="QGL-yk-1kF" id="qZC-gx-Bdm"/>
+            </connections>
+            <point key="canvasLocation" x="66.666666666666671" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
