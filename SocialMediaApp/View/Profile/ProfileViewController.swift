@@ -16,22 +16,28 @@ class ProfileViewController:UIViewController {
         let viewModel = ProfileViewModel(dataSource: profileDataSource)
         return viewModel
     }()
-    var user_id:String = ""
+    var user:User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "User Profile"
         let nib = UINib(nibName: "ProfileCell", bundle: nil)
         self.profileTableView.register(nib, forCellReuseIdentifier: profileCellIdentifier)
         self.profileTableView.dataSource = profileDataSource
-        self.profileDataSource.feed_data.addAndNotify(observer: self) { [weak self] _ in
-            print("profileDataSource changed table")
-            self?.profileTableView.reloadData()
+        if let userData = self.user {
+            self.profileDataSource.feed_data.value = [userData]
         }
-        guard self.profileDataSource.feed_data.value.count == 0 else {
-            print("Reloading table")
-            self.profileTableView.reloadData()
-            return
+        else{
+            self.profileDataSource.feed_data.addAndNotify(observer: self) { [weak self] _ in
+                print("profileDataSource changed table")
+                self?.profileTableView.reloadData()
+            }
+            guard self.profileDataSource.feed_data.value.count == 0 else {
+                print("Reloading table")
+                self.profileTableView.reloadData()
+                return
+            }
+            self.profileViewModel.fetchProfileList(of: String(user.id))
         }
-        self.profileViewModel.fetchProfileList(of: user_id)
     }
 }

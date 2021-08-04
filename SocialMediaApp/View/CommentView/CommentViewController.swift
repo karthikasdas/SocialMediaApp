@@ -15,9 +15,10 @@ class CommentViewController:UIViewController {
         let viewModel = CommentViewModel(dataSource: commentDataSource)
         return viewModel
     }()
-    
+    var page = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Comments"
         let nib = UINib(nibName: "ProfileCell", bundle: nil)
         self.commentTableView.register(nib, forCellReuseIdentifier: profileCellIdentifier)
         self.commentTableView.dataSource = commentDataSource
@@ -25,6 +26,12 @@ class CommentViewController:UIViewController {
             self?.commentTableView.reloadData()
         }
         
-        self.commentViewModel.fetchCommentList()
+        loadComments()
+        NotificationCenter.default.addObserver(self,selector: #selector(loadComments),name: NSNotification.Name(rawValue: commentNotificationKey),object: nil)
+    }
+    
+    @objc func loadComments(){
+        page += 1
+        self.commentViewModel.fetchCommentList(of: String(page))
     }
 }

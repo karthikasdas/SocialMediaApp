@@ -11,6 +11,7 @@ import UIKit
 struct FeedListViewModel {
     weak var feedSource:FeedListDataSource!
     var api_service:APIService!
+    
     init(service: APIService = APIService(), dataSource : FeedListDataSource) {
         self.feedSource = dataSource
         self.api_service = service
@@ -20,14 +21,19 @@ struct FeedListViewModel {
         self.api_service = APIService()
         api_service.call(endpoint: ListEndpoint.GetFeed(pageNumber: page))  {
             [self] result in
-//            print("Resut \(result)")
+            print("Resut \(result)")
                 switch result {
                 case let .success(FeedList):
                         DispatchQueue.main.async {
                             spinner.willMove(toParent: nil)
                             spinner.view.removeFromSuperview()
                             spinner.removeFromParent()
-                            feedSource?.feed_data.value = FeedList.data
+                            if(feedSource?.feed_data.value.count == 0){
+                                feedSource?.feed_data.value = FeedList.data
+                            }
+                            else{
+                                feedSource?.feed_data.value.append(contentsOf: FeedList.data)
+                            }
                         }
                     
                 case .failure:

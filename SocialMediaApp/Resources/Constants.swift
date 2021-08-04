@@ -13,3 +13,6 @@ let feedListCellHeaderIdentifier = "FEED_CELL_HEADER"
 let profileCellIdentifier = "PROFILE_CELL_IDENTIFIER"
 
 let commentCellIdentifier = "COMMENT_CELL_IDENTIFIER"
+
+let notificationKey = "loadMoreData"
+let commentNotificationKey = "loadMoreComments"

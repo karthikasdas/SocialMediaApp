@@ -10,6 +10,7 @@ import Foundation
 struct Comment: Codable {
     let code: Int
     let data: [Comments]
+    let meta: Meta
 }
 
 // MARK: - Datum

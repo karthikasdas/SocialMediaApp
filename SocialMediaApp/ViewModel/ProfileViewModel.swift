@@ -19,6 +19,8 @@ struct ProfileViewModel {
         self.api_service = APIService()
         api_service.call(endpoint: ProfileEndPoint.GetProfile(userId: user))  {
             [self] result in
+            print("Profile Resut \(result)")
+
                 switch result {
                 case let .success(Profile):
                         DispatchQueue.main.async {

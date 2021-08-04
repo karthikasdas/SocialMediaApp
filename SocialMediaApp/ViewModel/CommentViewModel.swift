@@ -14,15 +14,20 @@ struct CommentViewModel {
         self.api_service = service
     }
    
-    mutating func fetchCommentList() {
+    mutating func fetchCommentList(of page:String) {
         self.api_service = APIService()
         api_service.call(endpoint: CommentEndPoint.GetComments())  {
             [self] result in
-            print("Resut profile \(result)")
+            print("comment profile \(result)")
                 switch result {
                 case let .success(Comment):
                         DispatchQueue.main.async {
-                            commentSource?.feed_data.value = Comment.data
+                            if(commentSource?.feed_data.value.count == 0){
+                                commentSource?.feed_data.value = Comment.data
+                            }
+                            else{
+                                commentSource?.feed_data.value.append(contentsOf: Comment.data)
+                            }
                         }
                 case .failure:
                     DispatchQueue.main.async {
