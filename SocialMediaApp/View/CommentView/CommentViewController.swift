@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+/*
+ 
+ class that shows comment list
+ Commenst shown as table
+ Table datasource is Comment data source
+ commentViewModel is used for api call
+ For easiness Profile Cell is used
+ When the last row is reached in comments table loadcomments() function is notified to call more api.
+ */
 class CommentViewController:UIViewController {
     @IBOutlet weak var commentTableView : UITableView!
     var commentDataSource = CommentDataSource()

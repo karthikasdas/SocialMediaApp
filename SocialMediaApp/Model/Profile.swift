@@ -6,8 +6,10 @@
 //
 
 import Foundation
-
-// MARK: - User
+/*
+ Struct that mimics backend json keys for profile view
+ */
+// MARK: - Profile
 struct Profile: Codable {
     let data: User
 }

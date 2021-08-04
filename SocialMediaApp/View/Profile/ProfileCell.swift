@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+/*
+ Represents the Profile cell and cell in the comment table
+ */
 class ProfileCell:UITableViewCell {
     
     @IBOutlet weak var valueText: UILabel!

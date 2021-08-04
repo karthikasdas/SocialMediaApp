@@ -6,6 +6,9 @@
 //
 
 import Foundation
+/*
+ To call the api for comment view
+ */
 struct CommentViewModel {
     weak var commentSource:CommentDataSource!
     var api_service:APIService!

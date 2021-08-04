@@ -6,14 +6,17 @@
 //
 
 import Foundation
-// MARK: - Welcome
+// MARK: - Comment
+/*
+ Struct that mimics backend json keys for Comment list
+ */
 struct Comment: Codable {
     let code: Int
     let data: [Comments]
     let meta: Meta
 }
 
-// MARK: - Datum
+// MARK: - Comments
 struct Comments: Codable {
     let id, postID: Int
     let name, email, body: String

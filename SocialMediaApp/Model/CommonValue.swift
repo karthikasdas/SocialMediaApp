@@ -6,7 +6,10 @@
 //
 
 import Foundation
-
+/*
+ Generic class for holding the values of Generic data source
+ Contains observers to observe the change of this generic value
+ */
 class CommonValue<T> {
     
     typealias CompletionHandler = ((T) -> Void)

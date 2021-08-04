@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+/*
+ Struct that mimics backend json keys for feed list
+ */
 // MARK: - FeedList
 struct FeedList: Codable {
     let code: Int

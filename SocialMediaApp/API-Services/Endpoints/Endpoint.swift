@@ -7,7 +7,13 @@
 
 import Foundation
 
-
+/*
+ baseURL - bckend main URL
+ path -  any additional path from base
+ verb - kind of request (In this app only get is used)
+ pageRequired - to check for pagination
+ Endpoint extended to add and modify url request
+ */
 protocol Endpoint {
     associatedtype ModelType: Decodable
     

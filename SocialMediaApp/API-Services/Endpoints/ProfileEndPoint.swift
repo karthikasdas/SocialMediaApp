@@ -6,6 +6,10 @@
 //
 
 import Foundation
+/*
+For listing profile in the profile view
+ Implements Endpoint delegate
+ */
 enum ProfileEndPoint {
     struct GetProfile: Endpoint {
         typealias ModelType = Profile

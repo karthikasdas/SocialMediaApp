@@ -6,7 +6,10 @@
 //
 
 import Foundation
-
+/*
+For listing feeds in the feed list view
+ Implements Endpoint delegate
+ */
 enum ListEndpoint {
     struct GetFeed: Endpoint {
         typealias ModelType = FeedList

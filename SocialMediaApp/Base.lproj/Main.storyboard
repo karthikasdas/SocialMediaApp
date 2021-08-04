@@ -11,7 +11,7 @@
         <!--Feed List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FeedListViewController" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FeedListViewController" customModule="SocialMediaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zzp-aZ-4u6"/>
                     <connections>
-                        <outlet property="tableView" destination="Kc8-aK-qtZ" id="NBv-iE-FzP"/>
+                        <outlet property="tableView" destination="Kc8-aK-qtZ" id="db4-Yr-men"/>
                         <segue destination="DiH-2l-TPf" kind="show" identifier="commentSegue" id="0cf-eh-eJz"/>
                         <segue destination="kCd-vm-d6o" kind="show" identifier="profileClick" id="yXd-KP-7FH"/>
                     </connections>

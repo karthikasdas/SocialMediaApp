@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+
+/*
+ 
+ class that shows profile data
+ Data shown in a table
+ Table datasource is ProfileDataSource
+ profileViewModel is used for api call
+ Observer has been used to get notified when the feed data of the data source is changed and to reload the table view
+ */
 class ProfileViewController:UIViewController {
     
     @IBOutlet weak var profileTableView : UITableView!

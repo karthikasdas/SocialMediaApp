@@ -6,6 +6,10 @@
 //
 
 import Foundation
+/*
+For listing comments in the comments view
+Implements Endpoint delegate
+ */
 enum CommentEndPoint {
     struct GetComments: Endpoint {
         typealias ModelType = Comment

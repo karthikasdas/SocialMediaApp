@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
-//protocol ProfileClickDelegate:AnyObject {
-//    func profileClicked(user:User)
-//}
+/*
+ This is the controller that is responsible for showing the feeds.
+ Feed is listed as table
+ FeedListDataSource is the datasource of the table
+ FeedListViewModel is used to call the api
+ Two notifications used - one to load more data and another one to show the profile page of a particular user
+ When clicked on Body part taken to the comment page
+ */
 
 class FeedListViewController:UIViewController {
     

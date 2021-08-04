@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+/*
+ Used to call the feed api to get the feed list
+ */
+
 struct FeedListViewModel {
     weak var feedSource:FeedListDataSource!
     var api_service:APIService!

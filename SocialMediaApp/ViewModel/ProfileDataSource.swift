@@ -9,6 +9,12 @@ import Foundation
 
 import UIKit
 
+/*
+ Data source for the profile table
+Implements GenericDataSource which is the generic class containing a value to hold all the data
+ Left side of cell shows the textData value and right side its value from the api
+ */
+
 class ProfileDataSource : GenericDataSource<User>, UITableViewDataSource {
     
     var textData = ["Name","Email","Gender","Status"]

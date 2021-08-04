@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+/*
+ To call the api for profile view
+ */
 struct ProfileViewModel {
     weak var profileSource:ProfileDataSource!
     var api_service:APIService!

@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+/*
+ Data source for the feed table
+ GenericDataSource is the generic class containing a value to hold all the data
+ */
 class GenericDataSource<T> : NSObject {
     var feed_data: CommonValue<[T]> = CommonValue([])
 }
@@ -26,6 +30,7 @@ class FeedListDataSource : GenericDataSource<ListOfFeed>, UITableViewDataSource,
         if indexPath.row == self.feed_data.value.count - 1 { // last cell
                 NotificationCenter.default.post(name: Notification.Name(rawValue: notificationKey), object: self)
         }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: feedListCellIdentifier, for: indexPath) as! FeedListCell
         cell.cellData = self.feed_data.value[indexPath.row]
         return cell

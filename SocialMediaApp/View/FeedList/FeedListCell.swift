@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+/*
+ Responsible for showing the feed cell
+ All Interface elements shown in feed table cell is listed
+ When each cell is loaded the profile name changes which is downloaded from the backend
+ */
 class FeedListCell:UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var body: UILabel!
@@ -58,7 +63,6 @@ class FeedListCell:UITableViewCell {
     }
     
     @objc func tapProfile(sender:UITapGestureRecognizer){
-        print("I tap")
         let userData:[String: User] = ["user": profileData]
 
           // post a notification

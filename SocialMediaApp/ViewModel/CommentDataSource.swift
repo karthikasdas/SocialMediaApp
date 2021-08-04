@@ -7,6 +7,11 @@
 
 import Foundation
 import UIKit
+/*
+ Data source for the comments table
+Implements GenericDataSource which is the generic class containing a value to hold all the data
+ Left side of cell shows the user name and right side comment posted by that user taken from the api
+ */
 
 class CommentDataSource : GenericDataSource<Comments>, UITableViewDataSource {
     
